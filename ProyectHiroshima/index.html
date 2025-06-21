@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbumes de Nirvana</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+        .button-container {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Álbumes de Nirvana</h1>
+    </header>
+    <div class="button-container">
+        <button onclick="clic1()">Bleach</button>
+        <button onclick="clic2()">Nevermind</button>
+        <button onclick="clic3()">In Utero</button>
+    </div>
+    <img id="img1" src="" alt="Álbum de Nirvana">
+    <audio id="audio" controls></audio> <!-- Reproductor de audio -->
+
+    <script>
+       function playAudio(src) {
+           const audio = document.getElementById("audio");
+           audio.src = src; // Asigna la fuente del audio
+           audio.play(); // Reproduce el audio
+       }
+
+       function clic1() {
+           const img = document.getElementById("img1");
+           img.src = "bleach.jpeg"; // Imagen del álbum Bleach
+           playAudio("about.mpeg"); // Canción del álbum Bleach
+       }
+
+       function clic2() {
+           const img = document.getElementById("img1");
+           img.src = "nevermind.jpeg"; // Imagen del álbum Nevermind
+           playAudio("smell.mpeg"); // Canción del álbum Nevermind
+       }
+
+       function clic3() {
+           const img = document.getElementById("img1");
+           img.src = "inutero.jpeg"; // Imagen del álbum In Utero
+           playAudio("heart.mpeg"); // Canción del álbum In Utero
+       }
+    </script>
+</body>
+</html>
